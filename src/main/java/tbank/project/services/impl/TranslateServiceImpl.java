@@ -91,7 +91,6 @@ public class TranslateServiceImpl implements TranslateService {
             futures.add(translateTextUtil(request));
         }
 
-        // Собираем переведенные слова в правильном порядке
         List<String> translatedWords = new ArrayList<>();
         for (Future<String> future : futures) {
             try {
